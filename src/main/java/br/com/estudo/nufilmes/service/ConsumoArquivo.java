@@ -12,7 +12,6 @@ public class ConsumoArquivo<T> {
     public <T> T ObterDados(String fileName, Class<T> classe){
 
         try {
-            System.out.println(fileName);
             File file = new File(fileName);
             return mapper.readValue(file, classe);
         } catch (JsonProcessingException e) {
